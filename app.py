@@ -41,8 +41,8 @@ SleepSchedule = None
 
                 #<br>
 
-import waitress
-from waitress import serve
+#import waitress
+#from waitress import serve
 
 data_path = mne.datasets.ssvep.data_path()
 data_path2 = mne.datasets.sample.data_path()
@@ -5926,5 +5926,5 @@ def process():
 
 
 if __name__ == '__main__':
-    #app.run(debug=True, port=5002)
-    serve(app, host='0.0.0.0', port=5004, threads=4)
+    app.run(debug=True, host='0.0.0.0')
+    #serve(app, host='0.0.0.0', port=5004, threads=4)
