@@ -41,7 +41,6 @@ SleepSchedule = None
 
                 #<br>
 
-#import waitress
 #from waitress import serve
 
 data_path = mne.datasets.ssvep.data_path()
@@ -246,7 +245,7 @@ def process():
         </p>
         """
         report.add_html(html=myhtml, title=name + "'s Personalized Recommendations")
-        report.save("report_add_html.html", overwrite=True)
+        report.save("templates/report_add_html.html", overwrite=True)
         if SleepSchedule == "10 hours":
             if age < 18:
                 myhtml = f"""
@@ -254,7 +253,7 @@ def process():
                 <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -272,7 +271,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -290,7 +289,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 else:
                     pass
 
@@ -300,7 +299,7 @@ def process():
                     <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -318,7 +317,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -336,7 +335,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = """
                 <h1> Keep Doing What You're Doing </h1>
@@ -345,7 +344,7 @@ def process():
                 <p> As you'll be wrapping up your growth within the ages of 18-27, this is the time where you shouldn't compromise your growth. Keep doing what you're doing. </p>
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -363,7 +362,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -381,14 +380,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = """
                 <h1> Wow </h1>
                 <p> That's a great amount of sleep. Great job!
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -406,7 +405,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -424,13 +423,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                     <h1> At your age, the main goal would be to aim for more sleep </h1>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -448,7 +447,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -466,7 +465,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "9 hours":
             if age == 18:
                 myhtml = """
@@ -474,7 +473,7 @@ def process():
                     <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -492,7 +491,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -510,7 +509,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "18" and age < "27":
                 myhtml = """
                 <h1> Keep Doing What You're Doing </h1>
@@ -519,7 +518,7 @@ def process():
                 <p> As you'll be wrapping up your growth within the ages of 18-27, this is the time where you shouldn't compromise your growth. Keep doing what you're doing. </p>
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -537,7 +536,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -555,14 +554,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "30" and age < "45":
                 myhtml = """
                 <h1> Wow </h1>
                 <p> That's a good amount of sleep. Great job!
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -580,7 +579,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -598,13 +597,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                     <h1> At your age, the main goal would be to aim for more sleep </h1>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -622,7 +621,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -640,14 +639,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "8 hours":
             if age < 18:
                 myhtml = f"""
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -665,7 +664,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -683,14 +682,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -708,7 +707,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -726,14 +725,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -751,7 +750,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -769,14 +768,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -794,7 +793,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -812,13 +811,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -836,7 +835,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -854,14 +853,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "7 hours":
             if age < 18:
                 myhtml = f"""
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -879,7 +878,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -897,14 +896,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -922,7 +921,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -940,14 +939,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -965,7 +964,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -983,14 +982,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1008,7 +1007,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1026,13 +1025,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1050,7 +1049,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1068,7 +1067,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
 
         elif SleepSchedule == "6 hours":
             if age < 18:
@@ -1076,7 +1075,7 @@ def process():
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1094,7 +1093,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1112,14 +1111,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1137,7 +1136,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1155,14 +1154,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1180,7 +1179,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1198,14 +1197,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1223,7 +1222,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1241,13 +1240,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1265,7 +1264,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1283,14 +1282,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "5 hours":
             if age < 18:
                 myhtml = f"""
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1308,7 +1307,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1326,14 +1325,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1351,7 +1350,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1369,14 +1368,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1394,7 +1393,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1412,14 +1411,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1437,7 +1436,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1455,13 +1454,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1479,7 +1478,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1497,7 +1496,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
 
         elif SleepSchedule == "11 hours":
             if age < 18:
@@ -1505,7 +1504,7 @@ def process():
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1523,7 +1522,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1541,14 +1540,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1566,7 +1565,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1584,14 +1583,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1609,7 +1608,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1627,14 +1626,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1652,7 +1651,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1670,13 +1669,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1694,7 +1693,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1712,7 +1711,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
     elif melatonin_get == "45":
         myhtml = f"""
                 <h1> {name}'s Personalized Sleep Recommendations </h1>
@@ -1732,7 +1731,7 @@ def process():
                 </p>
                 """
         report.add_html(html=myhtml, title=name + "'s Personalized Recommendations")
-        report.save("report_add_html.html", overwrite=True)
+        report.save("templates/report_add_html.html", overwrite=True)
         if SleepSchedule == "10 hours":
             if age < 18:
                 myhtml = f"""
@@ -1740,7 +1739,7 @@ def process():
                     <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                     """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1758,7 +1757,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1776,14 +1775,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = """
                         <h1> Great Job </h1>
                         <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                         """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1801,7 +1800,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1819,7 +1818,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = """
                     <h1> Keep Doing What You're Doing </h1>
@@ -1828,7 +1827,7 @@ def process():
                     <p> As you'll be wrapping up your growth within the ages of 18-27, this is the time where you shouldn't compromise your growth. Keep doing what you're doing. </p>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1846,7 +1845,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1864,14 +1863,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = """
                     <h1> Wow </h1>
                     <p> That's a great amount of sleep. Great job!
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1889,7 +1888,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1907,13 +1906,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                         <h1> At your age, the main goal would be to aim for more sleep </h1>
                         """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1931,7 +1930,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1949,7 +1948,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "9 hours":
             if age == 18:
                 myhtml = """
@@ -1957,7 +1956,7 @@ def process():
                         <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                         """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -1975,7 +1974,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -1993,7 +1992,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "18" and age < "27":
                 myhtml = """
                     <h1> Keep Doing What You're Doing </h1>
@@ -2002,7 +2001,7 @@ def process():
                     <p> As you'll be wrapping up your growth within the ages of 18-27, this is the time where you shouldn't compromise your growth. Keep doing what you're doing. </p>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2020,7 +2019,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2038,14 +2037,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "30" and age < "45":
                 myhtml = """
                     <h1> Wow </h1>
                     <p> That's a good amount of sleep. Great job!
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2063,7 +2062,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2081,13 +2080,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                         <h1> At your age, the main goal would be to aim for more sleep </h1>
                         """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2105,7 +2104,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2123,14 +2122,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "8 hours":
             if age < 18:
                 myhtml = f"""
                     <h1> 8 hours! </h1>
                     <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2148,7 +2147,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2166,14 +2165,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                     <h1> Sleep Recommendations </h1>
                     <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2191,7 +2190,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2209,14 +2208,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                     <h1> {name}'s Sleep Recommendations </h1>
                     <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2234,7 +2233,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2252,14 +2251,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                     <h1> {name}'s Sleep Recommendations </h1>
                     <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2277,7 +2276,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2295,13 +2294,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                     <h1> At your age, the main goal would be to aim for more sleep </h1>
                     """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2319,7 +2318,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2337,14 +2336,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "7 hours":
             if age < 18:
                 myhtml = f"""
                     <h1> 8 hours! </h1>
                     <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2362,7 +2361,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2380,14 +2379,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                     <h1> Sleep Recommendations </h1>
                     <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2405,7 +2404,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2423,14 +2422,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                     <h1> {name}'s Sleep Recommendations </h1>
                     <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2448,7 +2447,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2466,14 +2465,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                     <h1> {name}'s Sleep Recommendations </h1>
                     <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2491,7 +2490,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2509,13 +2508,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                     <h1> At your age, the main goal would be to aim for more sleep </h1>
                     """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2533,7 +2532,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2551,7 +2550,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
 
         elif SleepSchedule == "6 hours":
             if age < 18:
@@ -2559,7 +2558,7 @@ def process():
                     <h1> 8 hours! </h1>
                     <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2577,7 +2576,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2595,14 +2594,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                     <h1> Sleep Recommendations </h1>
                     <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2620,7 +2619,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2638,14 +2637,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                     <h1> {name}'s Sleep Recommendations </h1>
                     <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2663,7 +2662,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2681,14 +2680,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                     <h1> {name}'s Sleep Recommendations </h1>
                     <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2706,7 +2705,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2724,13 +2723,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                     <h1> At your age, the main goal would be to aim for more sleep </h1>
                     """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2748,7 +2747,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2766,14 +2765,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "5 hours":
             if age < 18:
                 myhtml = f"""
                     <h1> 8 hours! </h1>
                     <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2791,7 +2790,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2809,14 +2808,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                     <h1> Sleep Recommendations </h1>
                     <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2834,7 +2833,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2852,14 +2851,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                     <h1> {name}'s Sleep Recommendations </h1>
                     <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2877,7 +2876,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2895,14 +2894,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                     <h1> {name}'s Sleep Recommendations </h1>
                     <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                     """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2920,7 +2919,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2955,7 +2954,7 @@ def process():
             </p>
             """
         report.add_html(html=myhtml, title=name + "'s Personalized Recommendations")
-        report.save("report_add_html.html", overwrite=True)
+        report.save("templates/report_add_html.html", overwrite=True)
         if SleepSchedule == "10 hours":
             if age < 18:
                 myhtml = f"""
@@ -2963,7 +2962,7 @@ def process():
                 <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -2981,7 +2980,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -2999,14 +2998,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = """
                     <h1> Great Job </h1>
                     <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3024,7 +3023,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3042,7 +3041,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = """
                 <h1> Keep Doing What You're Doing </h1>
@@ -3051,7 +3050,7 @@ def process():
                 <p> As you'll be wrapping up your growth within the ages of 18-27, this is the time where you shouldn't compromise your growth. Keep doing what you're doing. </p>
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3069,7 +3068,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3087,14 +3086,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = """
                 <h1> Wow </h1>
                 <p> That's a great amount of sleep. Great job!
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3112,7 +3111,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3130,13 +3129,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                     <h1> At your age, the main goal would be to aim for more sleep </h1>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3154,7 +3153,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3172,7 +3171,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "9 hours":
             if age == 18:
                 myhtml = """
@@ -3180,7 +3179,7 @@ def process():
                     <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3198,7 +3197,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3216,7 +3215,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "18" and age < "27":
                 myhtml = """
                 <h1> Keep Doing What You're Doing </h1>
@@ -3225,7 +3224,7 @@ def process():
                 <p> As you'll be wrapping up your growth within the ages of 18-27, this is the time where you shouldn't compromise your growth. Keep doing what you're doing. </p>
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3243,7 +3242,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3261,14 +3260,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "30" and age < "45":
                 myhtml = """
                 <h1> Wow </h1>
                 <p> That's a good amount of sleep. Great job!
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3286,7 +3285,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3304,13 +3303,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                     <h1> At your age, the main goal would be to aim for more sleep </h1>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3328,7 +3327,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3346,14 +3345,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "8 hours":
             if age < 18:
                 myhtml = f"""
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3371,7 +3370,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3389,14 +3388,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3414,7 +3413,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3432,14 +3431,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3457,7 +3456,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3475,14 +3474,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3500,7 +3499,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3518,13 +3517,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3542,7 +3541,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3560,14 +3559,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "7 hours":
             if age < 18:
                 myhtml = f"""
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3585,7 +3584,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3603,14 +3602,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com</b>. </i> Find this code on <a href="www.github.com/AbhiramRuthala">  GitHub! </a> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3628,7 +3627,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3646,14 +3645,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3671,7 +3670,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3689,14 +3688,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3714,7 +3713,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3732,13 +3731,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3756,7 +3755,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3774,7 +3773,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
 
         elif SleepSchedule == "6 hours":
             if age < 18:
@@ -3782,7 +3781,7 @@ def process():
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3800,7 +3799,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3818,14 +3817,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3843,7 +3842,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3861,14 +3860,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3886,7 +3885,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3904,14 +3903,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3929,7 +3928,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3947,13 +3946,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -3971,7 +3970,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -3989,14 +3988,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "5 hours":
             if age < 18:
                 myhtml = f"""
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4014,7 +4013,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4032,14 +4031,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4057,7 +4056,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4075,14 +4074,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4100,7 +4099,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4118,14 +4117,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4143,7 +4142,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4161,13 +4160,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4185,7 +4184,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4203,7 +4202,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
 
         elif SleepSchedule == "11 hours":
             if age < 18:
@@ -4211,7 +4210,7 @@ def process():
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4229,7 +4228,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4247,14 +4246,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4272,7 +4271,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4290,14 +4289,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4315,7 +4314,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4333,14 +4332,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4358,7 +4357,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4376,13 +4375,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4400,7 +4399,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4418,7 +4417,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General ways to improve sleep")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
     elif melatonin_get == "25":
         myhtml = f"""
             <h1> {name}'s Personalized Sleep Recommendations </h1>
@@ -4438,7 +4437,7 @@ def process():
             </p>
             """
         report.add_html(html=myhtml, title=name + "'s Personalized Recommendations")
-        report.save("report_add_html.html", overwrite=True)
+        report.save("templates/report_add_html.html", overwrite=True)
         if SleepSchedule == "10 hours":
             if age < 18:
                 myhtml = f"""
@@ -4446,7 +4445,7 @@ def process():
                 <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4464,7 +4463,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4482,7 +4481,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
 
             elif age == 18:
                 myhtml = """
@@ -4490,7 +4489,7 @@ def process():
                     <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4508,7 +4507,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4526,7 +4525,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
 
             elif age > 18 and age < 27:
                 myhtml = """
@@ -4536,7 +4535,7 @@ def process():
                 <p> As you'll be wrapping up your growth within the ages of 18-27, this is the time where you shouldn't compromise your growth. Keep doing what you're doing. </p>
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4554,7 +4553,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4572,14 +4571,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = """
                 <h1> Wow </h1>
                 <p> That's a great amount of sleep. Great job!
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4597,7 +4596,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4615,13 +4614,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                     <h1> At your age, the main goal would be to aim for more sleep </h1>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4639,7 +4638,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4657,7 +4656,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "9 hours":
             if age == 18:
                 myhtml = """
@@ -4665,7 +4664,7 @@ def process():
                     <p> This will help with sleep immensely. Stay consistent and continue to endure growth and development. </p>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4683,7 +4682,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4701,7 +4700,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "18" and age < "27":
                 myhtml = """
                 <h1> Keep Doing What You're Doing </h1>
@@ -4710,7 +4709,7 @@ def process():
                 <p> As you'll be wrapping up your growth within the ages of 18-27, this is the time where you shouldn't compromise your growth. Keep doing what you're doing. </p>
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4728,7 +4727,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4746,14 +4745,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "30" and age < "45":
                 myhtml = """
                 <h1> Wow </h1>
                 <p> That's a good amount of sleep. Great job!
                 """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4771,7 +4770,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4789,13 +4788,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                     <h1> At your age, the main goal would be to aim for more sleep </h1>
                     """
                 report.add_html(html=myhtml, title="data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4813,7 +4812,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4831,14 +4830,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
         elif SleepSchedule == "8 hours":
             if age < 18:
                 myhtml = f"""
                 <h1> 8 hours! </h1>
                 <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4856,7 +4855,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4874,14 +4873,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age == 18:
                 myhtml = f"""
                 <h1> Sleep Recommendations </h1>
                 <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4899,7 +4898,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4917,14 +4916,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 18 and age < 27:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4942,7 +4941,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -4960,14 +4959,14 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > 30 and age < 45:
                 myhtml = f"""
                 <h1> {name}'s Sleep Recommendations </h1>
                 <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
                 """
                 report.add_html(html=myhtml, title="Data")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -4985,7 +4984,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5003,13 +5002,13 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="General Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
             elif age > "55" and age < "70":
                 myhtml = """
                 <h1> At your age, the main goal would be to aim for more sleep </h1>
                 """
                 report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
                 if specificity == "1":
                     myhtml = f"""
                     <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5027,7 +5026,7 @@ def process():
                     <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                     report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                    report.save("report_add_html.html", overwrite=True)
+                    report.save("templates/report_add_html.html", overwrite=True)
                 elif specificity == "2":
                     myhtml = f"""
                     <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5045,14 +5044,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
     elif SleepSchedule == "7 hours":
         if age < 18:
             myhtml = f"""
             <h1> 8 hours! </h1>
             <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
             report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5070,7 +5069,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5088,14 +5087,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age == 18:
             myhtml = f"""
             <h1> Sleep Recommendations </h1>
             <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5113,7 +5112,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5131,14 +5130,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > 18 and age < 27:
             myhtml = f"""
             <h1> {name}'s Sleep Recommendations </h1>
             <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5156,7 +5155,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5174,14 +5173,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > 30 and age < 45:
             myhtml = f"""
             <h1> {name}'s Sleep Recommendations </h1>
             <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5199,7 +5198,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5217,13 +5216,13 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > "55" and age < "70":
             myhtml = """
             <h1> At your age, the main goal would be to aim for more sleep </h1>
             """
             report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
 
             if specificity == "1":
                 myhtml = f"""
@@ -5242,7 +5241,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5260,7 +5259,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
 
     elif SleepSchedule == "6 hours":
         if age < 18:
@@ -5268,7 +5267,7 @@ def process():
             <h1> 8 hours! </h1>
             <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
             report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5286,7 +5285,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5304,14 +5303,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age == 18:
             myhtml = f"""
             <h1> Sleep Recommendations </h1>
             <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5329,7 +5328,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5347,14 +5346,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > 18 and age < 27:
             myhtml = f"""
             <h1> {name}'s Sleep Recommendations </h1>
             <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5372,7 +5371,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5390,14 +5389,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > 30 and age < 45:
             myhtml = f"""
             <h1> {name}'s Sleep Recommendations </h1>
             <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5415,7 +5414,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5433,13 +5432,13 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > "55" and age < "70":
             myhtml = """
             <h1> At your age, the main goal would be to aim for more sleep </h1>
             """
             report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5457,7 +5456,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5475,14 +5474,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
     elif SleepSchedule == "5 hours":
         if age < 18:
             myhtml = f"""
             <h1> 8 hours! </h1>
             <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
             report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5500,7 +5499,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5518,14 +5517,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age == 18:
             myhtml = f"""
             <h1> Sleep Recommendations </h1>
             <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5543,7 +5542,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5561,14 +5560,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > 18 and age < 27:
             myhtml = f"""
             <h1> {name}'s Sleep Recommendations </h1>
             <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5586,7 +5585,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5604,14 +5603,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > 30 and age < 45:
             myhtml = f"""
             <h1> {name}'s Sleep Recommendations </h1>
             <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5629,7 +5628,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5647,13 +5646,13 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > "55" and age < "70":
             myhtml = """
             <h1> At your age, the main goal would be to aim for more sleep </h1>
             """
             report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5671,7 +5670,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5689,7 +5688,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
 
     elif SleepSchedule == "11 hours":
         if age < 18:
@@ -5697,7 +5696,7 @@ def process():
             <h1> 8 hours! </h1>
             <p> Great job <b>{name}</b>! Continue to do what you are doing. Stick to this sleep schedule and you will be great. </p>"""
             report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5715,7 +5714,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5733,14 +5732,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age == 18:
             myhtml = f"""
             <h1> Sleep Recommendations </h1>
             <p> You're still growing {name}, so make sure to stay consistent and endure the growth.</p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5758,7 +5757,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5776,14 +5775,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > 18 and age < 27:
             myhtml = f"""
             <h1> {name}'s Sleep Recommendations </h1>
             <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5801,7 +5800,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5819,14 +5818,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > 30 and age < 45:
             myhtml = f"""
             <h1> {name}'s Sleep Recommendations </h1>
             <p> Main thing is to stay consistent. Also, make sure to practice good routine practices when you go to sleep. </p>
             """
             report.add_html(html=myhtml, title="Data")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5844,7 +5843,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5862,13 +5861,13 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
         elif age > 55 and age < 70:
             myhtml = """
             <h1> At your age, the main goal would be to aim for more sleep </h1>
             """
             report.add_html(html=myhtml, title=name + "'s Personalized Sleep Recommendations")
-            report.save("report_add_html.html", overwrite=True)
+            report.save("templates/report_add_html.html", overwrite=True)
             if specificity == "1":
                 myhtml = f"""
                 <h1> Here are specific ways to conduct your recommendations </h1>
@@ -5886,7 +5885,7 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="Specific Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
             elif specificity == "2":
                 myhtml = f"""
                 <h1> Here are GENERAL ways to conduct your recommendations </h1>
@@ -5904,14 +5903,14 @@ def process():
                 <p> <i> If there are any concerns, send feedback about the recommendations to <b> abhizgunna@gmail.com </b> </i> </p>"""
 
                 report.add_html(html=myhtml, title="General Recommendation Steps")
-                report.save("report_add_html.html", overwrite=True)
+                report.save("templates/report_add_html.html", overwrite=True)
     else:
         # Only if melatonin values seem to be compromised. This usually won't be the case.
         myhtml = """
             <h1>I'm not sure about this response</h1>
             <p>Consider running the system again. If it fails again, send feedback to the creator at <i> abhizgunna@gmail.com </i> </p>"""
         report.add_html(html=myhtml, title="Error")
-        report.save("report_add_html.html", overwrite=True)
+        report.save("templates/report_add_html.html", overwrite=True)
         sys.exit()
 
     # Assuming 'input_name' is the name attribute of your input field
@@ -5919,7 +5918,7 @@ def process():
     return render_template('report_add_html.html')
 
 
-#report.save("report_add_html.html", overwrite=True)
+#report.save("templates/report_add_html.html", overwrite=True)
 #print(f"""
 #{name}'s data report has been generated!
 #""")
