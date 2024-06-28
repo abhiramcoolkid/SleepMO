@@ -41,6 +41,7 @@ SleepSchedule = None
 
                 #<br>
 
+import waitress
 from waitress import serve
 
 data_path = mne.datasets.ssvep.data_path()
