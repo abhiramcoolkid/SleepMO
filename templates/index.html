@@ -1,0 +1,145 @@
+
+<html>
+    <style>
+        body{
+            background-color: #f2f2f2;
+        }
+        form  {
+            font-family:"Georgia";
+        }
+        p {
+            font-family:"Georgia";
+        }
+        h1 {
+            font-family: "Georgia";
+            background-color: white;
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        div {
+            font-family: "Georgia";
+        }
+        button:hover {
+            background-color:green;
+            transition:0.5s
+            transform: translateY(-5px)
+        }
+        li a: hover {
+            transform: scale(1.4);
+        }
+        .hero {
+            text-align:left;
+            border: 2px black solid;
+            padding: 10px;
+            background-color: white;
+            text-align: center;
+        }
+        li:hover{
+        color: blue;
+        transition: color 0.3s ease;
+        }
+         h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        .heroszn {
+            background-color: #b3daff;
+            border: 1px black solid;
+        }
+    </style>
+    <head>
+        <title>
+            SleepMO Recommendation Provider
+        </title>
+        <h1>
+            <u>
+                SleepMO
+            </u>
+        </h1>
+
+        <p class="hero">
+            <li><a href="https://sleepmo.framer.ai/About">About Us</a></li>
+            <li><a href="https://sleepmo.framer.ai/Contact">Reach Out</a></li>
+        </p>
+
+    </head>
+    <body>
+
+        <p>
+           <i>The place to help you sleep better.</i>
+        </p>
+        <p style="background-color: #66ccff">
+            The SleepMO is an online service that helps you gain insights on healthy sleep habits by visualizing brain data from individuals, calculating the Signal-To-Noise Ratio, analyzing melatonin levels from those levels, and providing personalized recommendations for individuals.
+        </p>
+
+        <div class="heroszn">
+            <h2>Beta Testing</h2>
+
+            <form action="/process" method="POST" style="text-align: center;">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="input_name" placeholder="Name" required>
+                </div>
+
+
+                <br>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" placeholder="Age" required min="0" max="80">
+                </div>
+
+                <br>
+                <div>
+                    <label for="condition">Current Mood/Condition (Type either "Sleepy" or "Good"):</label>
+                    <input type="text" id="condition" name="condition" placeholder="Sleepy" required>
+                </div>
+                <br>
+                <div>
+                    <label for="schedule">Sleep Schedule:</label>
+                    <input type="text" id="schedule" name="schedule" placeholder="Example: 7 hours" required>
+                </div>
+                <br>
+
+                <div>
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" placeholder="xyz@gmail.com" required>
+                </div>
+                <br>
+
+                <div>
+                    <label>Type of Recommendation: </label>
+
+                    <label for="title">1 - Specific or 2 - General: </label>
+                    <input type="number" id="title" name="title" placeholder="Type 1 for Specific" required>
+
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="disease">Potential Disorder:</label>
+                    <input type="text" id="disease" name="disease" placeholder="Example: Sleep Apnea" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset">
+                </div>
+
+            </form>
+        </div>
+
+    <p>
+        <h1>Feedback</h1>
+        <p>You can send feedback to Abhiram at <b><i>abhizgunna@gmail.com</i></b></p>
+    </p>
+
+    </body>
+
+
+
+</html>
