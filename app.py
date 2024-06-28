@@ -5916,7 +5916,7 @@ def process():
 
     # Assuming 'input_name' is the name attribute of your input field
     # Process the data here
-    return 'Thank you.'
+    return render_template('report_add_html.html')
 
 
 #report.save("report_add_html.html", overwrite=True)
